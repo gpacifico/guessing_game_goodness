@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Guessing Game</title>
+        <title>GhostBusters Ghost Guesser</title>
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+        <meta charset="utf-8">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="script.js"></script>
         <script>
             var the_number = null;
             function pick_number() {
@@ -31,8 +35,11 @@
         </script>
     </head>
     <body onload="the_number = pick_number()">
-        <input id="guess_input" type="text" placeholder="Guess please">
+    <div id="map"></div>
+
+    <input id="guess_input" type="text" placeholder="Guess please">
         <div id="response_div"></div>
         <button class="submit_button">Submit Please</button>
+
     </body>
 </html>
