@@ -4,42 +4,18 @@
         <title>GhostBusters Ghost Guesser</title>
         <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
         <meta charset="utf-8">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTVuClGPf3AaULpaSCSxnNXF4AcFpvaa8&libraries=places&callback=initMap" async defer></script>
         <link rel="stylesheet" type="text/css" href="style.css">
         <script src="script.js"></script>
-        <script>
-            var the_number = null;
-            function pick_number() {
-                var random_number = Math.floor((Math.random() * 10) + 1);
-                return random_number;
-            }
-
-            function make_guess () {
-                var the_guess = $("#guess_input").val();
-                if(the_guess > the_number) {
-                    $("#response_div").text("Too High!").css({"background-color": "red", "color": "white"});
-                }
-                else if(the_guess < the_number) {
-                    $("#response_div").text("Too Low!").css({"background-color": "blue", "color": "white"});
-                }
-                else if(the_guess === the_number) {
-                    $("#response_div").text("You guessed it!").css({"background-color": "green", "color": "white"});
-                }
-            }
-
-            $(document).ready(function () {
-                $(".submit_button").click(function () {
-                    make_guess();
-                });
-            });
-        </script>
     </head>
     <body onload="the_number = pick_number()">
-    <div id="map"></div>
-
-    <input id="guess_input" type="text" placeholder="Guess please">
+        <div id="map"></div>
+        <div id="guess_area">
+        <h1>Can you guess how many restaurants within a one-mile radius of the Ghostbusters Firestation are Slimer and his otherworldy friends haunting right this very moment? They move fast, so you better guess faster!</h1>
+        <input id="guess_input" type="text" placeholder="Guess please">
         <div id="response_div"></div>
         <button class="submit_button">Submit Please</button>
-
+        </div>
     </body>
 </html>
