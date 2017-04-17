@@ -14,6 +14,21 @@ function initMap() {
         zoom: 14
     });
 
+    // var image = 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQEwQp84-YH0b6p8c4sxJcPmAurvmWiHQd-IBDXku638VMaQ-yS';
+    // var beachMarker = new google.maps.Marker({
+    //     position: {lat: 40.719560, lng: -74.006626},
+    //     map: map,
+    //     icon: image
+    // });
+
+    var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
+    var ghost = new google.maps.Marker({
+        position: {lat: 40.719560, lng: -74.006626},
+        map: map,
+        icon: iconBase + 'campfire.png'
+    });
+
+
     infowindow = new google.maps.InfoWindow();
     var service = new google.maps.places.PlacesService(map);
     service.nearbySearch({
@@ -36,6 +51,7 @@ function createMarker(place) {
     var placeLoc = place.geometry.location;
     var marker = new google.maps.Marker({
         map: map,
+        animation: google.maps.Animation.DROP,
         position: place.geometry.location
     });
 
@@ -56,6 +72,12 @@ function make_guess () {
     var the_guess = $("#guess_input").val();
     if (the_guess > the_number) {
         $("#response_div").text("Too High!").css({"background-color": "red", "color": "white"});
+    }
+    else if (!the_guess) {
+        $("#response_div").text("You need to guess a number").css({"background-color": "green", "color": "white"});
+    }
+    else if (the_guess < 0) {
+        $("#response_div").text("Ghosts can't haunt negative restaurants!").css({"background-color": "blue", "color": "white"});
     }
     else if (the_guess < the_number) {
         $("#response_div").text("Too Low!").css({"background-color": "blue", "color": "white"});

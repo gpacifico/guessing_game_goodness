@@ -10,11 +10,11 @@ html, body {
     padding: 0;
 }
 
-body {
-    font-size: 0;
-}
+/*body {*/
+    /*font-size: 0;*/
+/*}*/
 
-#guess_area {
+.guess_area {
     font-family: 'Oxygen', sans-serif;
     background: url("images/ghostbusters_in_car.png") no-repeat;
     background-size: cover ;
@@ -28,4 +28,3 @@ h1 {
     margin: 0;
     padding: 0;
 }
-
