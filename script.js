@@ -57,25 +57,33 @@ function Guess_Ghosts () {
         var random_number = Math.floor((Math.random() * number_of_restaurants) + 1);
         return random_number;
     }
+    this.reset_input_field = function() {
+        $("#guess_input").val('');
+    }
     this.make_guess = function() {
         var the_guess = $("#guess_input").val();
         if (the_guess > the_number) {
             $("#response_div").text("Too High!").css({"background-color": "red", "color": "white"});
+            this.reset_input_field();
         }
         else if (!the_guess) {
             $("#response_div").text("You need to guess a number").css({"background-color": "green", "color": "white"});
+            this.reset_input_field();
         }
         else if (the_guess < 0) {
             $("#response_div").text("Ghosts can't haunt negative restaurants!").css({"background-color": "blue", "color": "white"});
+            this.reset_input_field();
         }
         else if (the_guess < the_number) {
             $("#response_div").text("Too Low!").css({"background-color": "blue", "color": "white"});
+            this.reset_input_field();
         }
         else if (the_guess == the_number) {
             $("#response_div").text("You guessed it!").css({"background-color": "green", "color": "white"});
         }
         else {
             $("#response_div").text("Dude, you need to guess a number!").css({"background-color": "purple", "color": "white"});
+            this.reset_input_field();
         }
     }
 }
