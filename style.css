@@ -17,10 +17,12 @@ html, body {
 .guess_area {
     /*font-family: 'Bree Serif', sans-serif;*/
     font-family: 'Vollkorn', sans-serif;
+    /*background: url("images/dripping_ooze.jpg") no-repeat;*/
     background: url("images/dripping_slime.png") no-repeat;
     background-size: cover ;
     height: 50%;
-    color: 	#000;
+    /*color: 	rgba(153,0,0,1);*/
+    color: red;
     font-weight: bold;
 }
 
@@ -57,7 +59,7 @@ button {
 
 #response_div {
     margin: auto;
-    width: 40%;
+    width: 28%;
 }
 
 /*.ooze {*/

@@ -78,8 +78,11 @@ function Guess_Ghosts () {
             $("#response_div").text("Too Low!").css({"background-color": "blue", "color": "white"});
             this.reset_input_field();
         }
+        // else if (the_guess == the_number) {
+        //     $("#response_div").text("You guessed it!").css({"background-color": "green", "color": "white"});
+        // }
         else if (the_guess == the_number) {
-            $("#response_div").text("You guessed it!").css({"background-color": "green", "color": "white"});
+            $("#response_div").text("Right!").css({"background-color": "green", "color": "white"}).prepend('<img src = "images/ghostbusters_logo_5.png">');
         }
         else {
             $("#response_div").text("Dude, you need to guess a number!").css({"background-color": "purple", "color": "white"});
