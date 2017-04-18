@@ -15,16 +15,48 @@ html, body {
 /*}*/
 
 .guess_area {
-    font-family: 'Oxygen', sans-serif;
-    background: url("images/ghostbusters_in_car.png") no-repeat;
+    /*font-family: 'Bree Serif', sans-serif;*/
+    font-family: 'Vollkorn', sans-serif;
+    background: url("images/slimer.jpg") no-repeat;
     background-size: cover ;
     height: 50%;
     color: 	#fff;
     font-weight: bold;
 }
 
-h1 {
-    font-size: 2rem;
+h2 {
+    /*font-size: 2rem;*/
     margin: 0;
     padding: 0;
 }
+
+/*h3, #response_div {*/
+    /*display: inline-block;*/
+    /*margin: 1vw;*/
+/*}*/
+
+h3 {
+    display: inline-block;
+    margin: 1vw;
+}
+
+h2 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+button {
+    color: yellow;
+    background-color: green;
+    box-shadow: 5px 5px 5px #888888;
+}
+
+.guess_here, #response_div {
+    text-align: center;
+}
+
+#response_div {
+    margin: auto;
+    width: 40%;
+}
+

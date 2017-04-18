@@ -4,7 +4,9 @@
         <title>GhostBusters Ghost Guesser</title>
         <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
         <meta charset="utf-8">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <link href='https://fonts.googleapis.com/css?family=Bree+Serif:400,700' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Vollkorn:400,700' rel='stylesheet' type='text/css'>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTVuClGPf3AaULpaSCSxnNXF4AcFpvaa8&libraries=places&callback=initMap" async defer></script>-->
         <link rel="stylesheet" type="text/css" href="style.css">
         <script src="script.js"></script>
@@ -13,11 +15,44 @@
     <body onload="the_number = pick_number()">
         <div id="map"></div>
         <div class="guess_area">
-        <h1>Can you guess how many restaurants within a one-mile radius of the Ghostbusters Firestation are Slimer and his otherworldy friends haunting right this very moment? They move fast, so you better guess faster!</h1>
-        <input id="guess_input" type="text" placeholder="Guess please">
-        <div id="response_div"></div>
-        <button class="submit_button">Submit Please</button>
+            <h2>Ghostbusters Ghost Guesser</h2>
+        <h3>Can you guess how many restaurants within two city blocks of the Ghostbusters Firestation are Slimer and his otherworldy friends haunting right this very moment? They move fast, so you better guess faster!</h3>
+            <div class="guess_here">
+        <input id="guess_input" type="text" placeholder="Guess Please">
+            <button class="submit_button">Submit Guess</button>
+            </div>
+            <div id="response_div"></div>
+
         </div>
         <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTVuClGPf3AaULpaSCSxnNXF4AcFpvaa8&libraries=places&callback=initMap" async defer></script>-->
     </body>
 </html>
+
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--<head>-->
+    <!--<title>GhostBusters Ghost Guesser</title>-->
+    <!--<meta name="viewport" content="initial-scale=1.0, user-scalable=no">-->
+    <!--<meta charset="utf-8">-->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>-->
+    <!--&lt;!&ndash;<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTVuClGPf3AaULpaSCSxnNXF4AcFpvaa8&libraries=places&callback=initMap" async defer></script>&ndash;&gt;-->
+    <!--<link rel="stylesheet" type="text/css" href="style.css">-->
+    <!--<script src="script.js"></script>-->
+    <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTVuClGPf3AaULpaSCSxnNXF4AcFpvaa8&libraries=places&callback=initMap" async defer></script>-->
+<!--</head>-->
+<!--<body onload="the_number = pick_number()">-->
+<!--<div id="map"></div>-->
+<!--<div class="guess_area">-->
+    <!--<form>-->
+        <!--<input type="radio" name="level" class="difficulty" id = "easy_radius" value="1609" > Easy<br>-->
+        <!--<input type="radio" name="level" class="difficulty" id = "medium_radius" value="3219" checked> Medium<br>-->
+        <!--<input type="radio" name="level" class="difficulty" id = "hard_radius" value="4828"> Hard-->
+    <!--</form>-->
+    <!--<h1>Can you guess how many restaurants within a one-mile radius of the Ghostbusters Firestation are Slimer and his otherworldy friends haunting right this very moment? They move fast, so you better guess faster!</h1>-->
+    <!--<input id="guess_input" type="text" placeholder="Guess please">-->
+    <!--<div id="response_div"></div>-->
+    <!--<button class="submit_button">Submit Please</button>-->
+<!--</div>-->
+<!--&lt;!&ndash;<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTVuClGPf3AaULpaSCSxnNXF4AcFpvaa8&libraries=places&callback=initMap" async defer></script>&ndash;&gt;-->
+<!--</body>-->
+<!--</html>-->
