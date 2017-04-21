@@ -66,7 +66,7 @@ function Guess_Ghosts () {
             this.reset_input_field();
         }
         else if (!the_guess) {
-            $("#response_div").text("You need to guess a number").css({"color": "#f29304"});
+            $("#response_div").text("You need to guess a number!").css({"color": "#f29304"});
             this.reset_input_field();
         }
         else if (the_guess < 0) {
