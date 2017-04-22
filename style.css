@@ -22,10 +22,12 @@ html, body, h1 {
 h2 {
     display: inline-block;
     margin: 1vw;
+    font-size: 1.7em;
 }
 
 h1 {
     text-transform: uppercase;
+    font-size: 2.1em;
 }
 
 button {
@@ -35,6 +37,7 @@ button {
 
 button, input {
     box-shadow: 5px 3px 5px #888888;
+    font-size: 1.5em;
 }
 
 input {
@@ -47,5 +50,6 @@ input {
 
 #response_div {
     margin: auto;
-    width: 28%;
+    width: 50%;
+    font-size: 1.5em;
 }
