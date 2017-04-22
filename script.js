@@ -78,7 +78,7 @@ function Guess_Ghosts () {
             this.reset_input_field();
         }
         else if (the_guess == the_number) {
-            $("#response_div").text("Right!").css({"color": "#0a7722"}).prepend('<img src = "images/ghostbusters_logo_5.png">');
+            $("#response_div").text("Right!").css({"color": "#0a7722"}).prepend('<img src = "images/ghostbusters_logo_8.png">');
         }
         else {
             $("#response_div").text("Dude, you need to type a number!").css({"color": "#8f2add"});

@@ -10,7 +10,8 @@ html, body {
     font-family: 'Vollkorn', sans-serif;
     background: url("images/dripping_slime.png") no-repeat;
     background-size: cover ;
-    color: #FF0000;
+    /*color: #FF0000;*/
+    color: black;
     font-weight: bold;
 }
 
