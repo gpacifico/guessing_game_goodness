@@ -9,8 +9,8 @@ html, body {
 .guess_area {
     font-family: 'Vollkorn', sans-serif;
     background: url("images/dripping_slime.png") no-repeat;
-    background-size: cover ;
-    color: black;
+    background-size: cover;
+    color: #000000;
     font-weight: bold;
 }
 

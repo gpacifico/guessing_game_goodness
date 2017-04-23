@@ -92,4 +92,9 @@ $(document).ready(function () {
     $(".submit_button").click(function () {
         make_guess();
     });
+    $("#guess_input").keypress(function(event) {
+        if (event.keyCode == 13) {
+            make_guess();
+        }
+    });
 });
