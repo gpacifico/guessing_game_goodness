@@ -1,6 +1,4 @@
-//THE OOP VERSION
-
-//THE MAP
+//THE MAP SHOWING THE RESTAURANTS AROUND THE GHOSTBUSTERS FIREHOUSE
 function Ghostbusters_Map() {
     this.map = null;
     this.infowindow = null;
@@ -28,7 +26,6 @@ function Ghostbusters_Map() {
     this.callback = function(results, status) {
         if (status === google.maps.places.PlacesServiceStatus.OK) {
             number_of_restaurants = results.length;
-            console.log(number_of_restaurants);
             for (var i = 0; i < results.length; i++) {
                 createMarker(results[i]);
             }
