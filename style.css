@@ -9,8 +9,8 @@ html, body {
 .guess_area {
     font-family: 'Vollkorn', sans-serif;
     background: url("images/dripping_slime.png") no-repeat;
-    background-size: cover ;
-    color: #FF0000;
+    background-size: cover;
+    color: #000000;
     font-weight: bold;
 }
 
@@ -21,17 +21,28 @@ html, body, h1 {
 
 h2 {
     display: inline-block;
-    margin: 1vw;
+    margin: 0 1vw;
+    font-size: 1.7em;
 }
 
 h1 {
     text-transform: uppercase;
+    font-size: 2.1em;
 }
 
 button {
-    color: #FFFF00;
+    color: #ffff00;
     background-color: #008000;
+    margin: 1vw;
+}
+
+button, input {
     box-shadow: 5px 3px 5px #888888;
+    font-size: 1.5em;
+}
+
+input {
+    background-color: #aaf442;
 }
 
 .guess_here, #response_div, h1 {
@@ -40,5 +51,6 @@ button {
 
 #response_div {
     margin: auto;
-    width: 28%;
+    width: 50%;
+    font-size: 1.5em;
 }

@@ -1,6 +1,4 @@
-//THE OOP VERSION
-
-//THE MAP
+//THE MAP SHOWING THE RESTAURANTS AROUND THE GHOSTBUSTERS FIREHOUSE
 function Ghostbusters_Map() {
     this.map = null;
     this.infowindow = null;
@@ -28,7 +26,6 @@ function Ghostbusters_Map() {
     this.callback = function(results, status) {
         if (status === google.maps.places.PlacesServiceStatus.OK) {
             number_of_restaurants = results.length;
-            console.log(number_of_restaurants);
             for (var i = 0; i < results.length; i++) {
                 createMarker(results[i]);
             }
@@ -78,7 +75,7 @@ function Guess_Ghosts () {
             this.reset_input_field();
         }
         else if (the_guess == the_number) {
-            $("#response_div").text("Right!").css({"color": "#0a7722"}).prepend('<img src = "images/ghostbusters_logo_5.png">');
+            $("#response_div").text("Right!").css({"color": "#0a7722"}).prepend('<img src = "images/ghostbusters_logo_8.png">');
         }
         else {
             $("#response_div").text("Dude, you need to type a number!").css({"color": "#8f2add"});
@@ -91,5 +88,10 @@ $(document).ready(function () {
     Guess_Ghosts();
     $(".submit_button").click(function () {
         make_guess();
+    });
+    $("#guess_input").keypress(function(event) {
+        if (event.keyCode == 13) {
+            make_guess();
+        }
     });
 });
