@@ -11,14 +11,15 @@
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTVuClGPf3AaULpaSCSxnNXF4AcFpvaa8&libraries=places&callback=initMap" async defer></script>
     </head>
     <body onload="the_number = pick_number()">
-    <div id="map"></div>
+        <img class="ghostbusters_team" src="images/ghostbusters_members.png">
+        <div id="map"></div>
         <div class="guess_area">
             <h1>Ghostbusters Ghost Guesser</h1>
-        <h2>Can you guess how many restaurants within two city blocks of the Ghostbusters Firehouse are Slimer and his
-            otherworldly friends haunting right this very moment? They move fast, so you better guess faster!</h2>
+            <h2>Can you guess how many restaurants within two city blocks of the Ghostbusters Firehouse are Slimer and his
+                otherworldly friends haunting right this very moment? They move fast, so you better guess faster!</h2>
             <div class="guess_here">
-        <input id="guess_input" type="text" placeholder="Guess Please">
-            <button class="submit_button">Submit Guess</button>
+                <input id="guess_input" type="text" placeholder="Guess Please">
+                <button class="submit_button">Submit Guess</button>
             </div>
             <div id="response_div"></div>
             <img src="images/slimer_pop_out.png">
