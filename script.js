@@ -7,7 +7,7 @@ function Ghostbusters_Map() {
         var firestation = {lat: 40.719560, lng: -74.006626};
         map = new google.maps.Map(document.getElementById('map'), {
             center: firestation,
-            zoom: 18
+            zoom: 17
         });
         var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
         var ghost = new google.maps.Marker({
@@ -59,7 +59,7 @@ function Guess_Ghosts () {
     this.make_guess = function() {
         var the_guess = $("#guess_input").val();
         if (the_guess > the_number) {
-            $("#response_div").text("Too High!").css({"color": "#d61148"});
+            $("#response_div").text("Sorry. Too High! Try again.").css({"color": "#d61148"});
             this.reset_input_field();
         }
         else if (!the_guess) {
@@ -71,7 +71,7 @@ function Guess_Ghosts () {
             this.reset_input_field();
         }
         else if (the_guess < the_number) {
-            $("#response_div").text("Too Low!").css({"color": "#0437e0"});
+            $("#response_div").text("Sorry. Too Low! Try again.").css({"color": "#2570fc"});
             this.reset_input_field();
         }
         else if (the_guess == the_number) {
