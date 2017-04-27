@@ -7,7 +7,7 @@ function Ghostbusters_Map() {
         var firestation = {lat: 40.719560, lng: -74.006626};
         map = new google.maps.Map(document.getElementById('map'), {
             center: firestation,
-            zoom: 18
+            zoom: 17
         });
         var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
         var ghost = new google.maps.Marker({
