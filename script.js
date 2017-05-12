@@ -49,17 +49,20 @@ Ghostbusters_Map();
 
 function Guess_Ghosts () {
     this.the_number = null;
+    this.attempts = 0;
     this.pick_number = function() {
         var random_number = Math.floor((Math.random() * number_of_restaurants) + 1);
         return random_number;
-    }
+    };
     this.reset_input_field = function() {
         $("#guess_input").val('');
-    }
+    };
     this.make_guess = function() {
         var the_guess = $("#guess_input").val();
         if (the_guess > the_number) {
             $("#response_div").text("Sorry. Too High! Try again.").css({"color": "#d61148"});
+            this.attempts ++;
+            this.punishement();
             this.reset_input_field();
         }
         else if (!the_guess) {
@@ -68,18 +71,40 @@ function Guess_Ghosts () {
         }
         else if (the_guess < 0) {
             $("#response_div").text("Ghosts can't haunt negative restaurants!").css({"color": "#6a0bef"});
+            this.attempts ++;
+            this.punishement();
             this.reset_input_field();
         }
         else if (the_guess < the_number) {
             $("#response_div").text("Sorry. Too Low! Try again.").css({"color": "#2570fc"});
+            this.attempts ++;
+            this.punishement();
             this.reset_input_field();
         }
         else if (the_guess == the_number) {
-            $("#response_div").text("Right!").css({"color": "#0a7722"}).prepend('<img src = "images/ghostbusters_logo_8.png">');
+            $("#response_div").text("GHOSTS BUSTED!").css({"color": "#0a7722"}).append('<br><img src = "images/ghostbusters_logo_8.png">');
+            $("body").css({"opacity": 1});
         }
         else {
             $("#response_div").text("Dude, you need to type a number!").css({"color": "#8f2add"});
             this.reset_input_field();
+        }
+    };
+    this.punishement = function () {
+        if (attempts === 1) {
+            $("body").css({"opacity": 0.8});
+        }
+        if (attempts === 2) {
+            $("body").css({"opacity": 0.6});
+        }
+        if (attempts === 3) {
+            $("body").css({"opacity": 0.4});
+        }
+        if (attempts === 4) {
+            $("body").css({"opacity": 0.2});
+        }
+        if (attempts === 5) {
+            $("body").css({"opacity": 0});
         }
     }
 }
