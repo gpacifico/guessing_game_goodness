@@ -84,6 +84,9 @@ function Guess_Ghosts () {
         else if (the_guess == the_number) {
             $("#response_div").text("GHOSTS BUSTED!").css({"color": "#0a7722"}).append('<br><img src = "images/ghostbusters_logo_8.png">');
             $("body").css({"opacity": 1});
+            this.reset_input_field();
+            $(".guess_here").css({"display": "none"});
+            $(".slimer").css({"display": "none"});
         }
         else {
             $("#response_div").text("Dude, you need to type a number!").css({"color": "#8f2add"});
