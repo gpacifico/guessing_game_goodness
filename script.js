@@ -106,30 +106,9 @@ function Guess_Ghosts () {
         else if (attempts === 4) {
             $("body").css({"opacity": 0.2});
         }
-        else if (attempts === 5) {
+        else if (attempts >= 5) {
             $("body").css({"opacity": 0});
         }
-        else if (attempts > 5) {
-            $("body").css({"opacity": 0});
-            // this.random_number = 42;
-            // $(".guess_here").remove();
-        }
-        // switch(attempts) {
-        //     case 1:
-        //         $("body").css({"opacity": 0.8});
-        //         break;
-        //     case 2:
-        //         $("body").css({"opacity": 0.6});
-        //         break;
-        //     case 3:
-        //         $("body").css({"opacity": 0.4});
-        //         break;
-        //     case 4:
-        //         $("body").css({"opacity": 0.2});
-        //         break;
-        //     case 5:
-        //         $("body").css({"opacity": 0});
-        // }
     }
 }
 
