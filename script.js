@@ -62,7 +62,7 @@ function Guess_Ghosts () {
         if (the_guess > the_number) {
             $("#response_div").text("Sorry. Too High! Try again.").css({"color": "#d61148"});
             this.attempts ++;
-            this.punishement();
+            this.punishment();
             this.reset_input_field();
         }
         else if (!the_guess) {
@@ -72,13 +72,13 @@ function Guess_Ghosts () {
         else if (the_guess < 0) {
             $("#response_div").text("Ghosts can't haunt negative restaurants!").css({"color": "#6a0bef"});
             this.attempts ++;
-            this.punishement();
+            this.punishment();
             this.reset_input_field();
         }
         else if (the_guess < the_number) {
             $("#response_div").text("Sorry. Too Low! Try again.").css({"color": "#2570fc"});
             this.attempts ++;
-            this.punishement();
+            this.punishment();
             this.reset_input_field();
         }
         else if (the_guess == the_number) {
@@ -93,7 +93,7 @@ function Guess_Ghosts () {
             this.reset_input_field();
         }
     };
-    this.punishement = function () {
+    this.punishment = function () {
         if (attempts === 1) {
             $("body").css({"opacity": 0.8});
         }
