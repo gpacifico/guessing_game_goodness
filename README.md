@@ -4,7 +4,7 @@ Slimer themed guessing game written in OOP. Revolves around the Ghostbusters fir
 The user guesses the number of restaurants that are being haunted by Slimer and his otherworldly friends within two city blocks 
 of the Ghostbusters firehouse. Desktop, tablet, and mobile responsive.
 
-<a href = "https://gpacifico.github.io/guessing_game_goodness/" target="_blank">Link to Live Site. Play the game!</a>
+<a href = "https://gpacifico.github.io/guessing_game_goodness/">Link to Live Site. Play the game!</a>
 
 ## Built with:
 - JavaScript
