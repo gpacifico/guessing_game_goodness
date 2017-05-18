@@ -69,3 +69,12 @@ input {
     margin: auto;
     font-size: 1.5em;
 }
+
+@media screen and (max-width: 750px) {
+    #map, .ghostbusters_team {
+        width: 100%;
+    }
+    #map {
+        height: 62%;
+    }
+}
