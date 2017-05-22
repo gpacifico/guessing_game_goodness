@@ -1,5 +1,20 @@
-#map, .guess_area, .ghostbusters_team {
-    height: 50%;
+/*#map, .guess_area, .ghostbusters_team {*/
+    /*height: 50%;*/
+/*}*/
+
+#map, .ghostbusters_team {
+    height: 40%;
+}
+
+.guess_area {
+    height: 60%;
+    border-top: 6px groove #00e600;
+    box-sizing: border-box;
+}
+
+.ghostbusters_team {
+    background: url("images/dripping_slime.png") no-repeat;
+    background-size: 157%;
 }
 
 #map, .guess_area, .ghostbusters_team, h2 {
@@ -13,6 +28,8 @@
 html, body {
     height: 100%;
     background-color: #000000;
+    /*background-color: #ff7400;*/
+    /*background-color: #52eb52;*/
 }
 
 body {
@@ -70,11 +87,40 @@ input {
     font-size: 1.5em;
 }
 
-@media screen and (max-width: 750px) {
+/*body.win body#body{*/
+    /*opacity: 1;*/
+/*}*/
+
+body.win .guess_here{
+    display: none;
+}
+
+body.win img.slimer {
+    display: none;
+}
+
+.hint {
+    color: red;
+}
+
+.hint:hover {
+    color: white;
+}
+
+.hide {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+@media screen and (max-width: 550px) {
     #map, .ghostbusters_team {
         width: 100%;
     }
-    #map {
-        height: 62%;
+    #map, .ghostbusters_team {
+        /*height: 62%;*/
+        height: 35%;
     }
 }
