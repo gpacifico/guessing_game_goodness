@@ -51,7 +51,7 @@ function Guess_Ghosts () {
     this.the_number = null;
     this.attempts = 0;
     this.pick_number = function() {
-        var random_number = Math.floor((Math.random() * number_of_restaurants) + 1);
+        var random_number = Math.floor((Math.random() * this.number_of_restaurants) + 1);
         return random_number;
     };
     this.reset_input_field = function() {
@@ -63,35 +63,28 @@ function Guess_Ghosts () {
             $("#response_div").text("Sorry. Too High! Try again.").css({"color": "#d61148"});
             this.attempts ++;
             this.punishment();
-            this.reset_input_field();
         }
         else if (!the_guess) {
             $("#response_div").text("You need to guess a number!").css({"color": "#f29304"});
-            this.reset_input_field();
         }
         else if (the_guess < 0) {
             $("#response_div").text("Ghosts can't haunt negative restaurants!").css({"color": "#6a0bef"});
             this.attempts ++;
             this.punishment();
-            this.reset_input_field();
         }
         else if (the_guess < the_number) {
             $("#response_div").text("Sorry. Too Low! Try again.").css({"color": "#2570fc"});
             this.attempts ++;
             this.punishment();
-            this.reset_input_field();
         }
         else if (the_guess == the_number) {
             $("#response_div").text("GHOSTS BUSTED!").css({"color": "#0a7722"}).append('<br><img src = "images/ghostbusters_logo_8.png">');
-            $("body").css({"opacity": 1});
-            this.reset_input_field();
-            $(".guess_here").css({"display": "none"});
-            $(".slimer").css({"display": "none"});
+            $("body").css({"opacity": 1}).addClass("win");
         }
         else {
             $("#response_div").text("Dude, you need to type a number!").css({"color": "#8f2add"});
-            this.reset_input_field();
         }
+        this.reset_input_field();
     };
     this.punishment = function () {
         if (attempts === 1) {
@@ -117,9 +110,12 @@ $(document).ready(function () {
     $(".submit_button").click(function () {
         make_guess();
     });
-    $("#guess_input").keypress(function(event) {
+    $("#guess_input").keypress(function (event) {
         if (event.keyCode == 13) {
             make_guess();
         }
     });
+    $(".hint").click(function () {
+        $("#hidden").toggleClass("hide");
+        })
 });

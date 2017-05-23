@@ -1,5 +1,16 @@
-#map, .guess_area, .ghostbusters_team {
-    height: 50%;
+#map, .ghostbusters_team {
+    height: 40%;
+}
+
+.guess_area {
+    height: 60%;
+    border-top: 6px groove #00e600;
+    box-sizing: border-box;
+}
+
+.ghostbusters_team {
+    background: url("images/dripping_slime.png") no-repeat;
+    background-size: 157%;
 }
 
 #map, .guess_area, .ghostbusters_team, h2 {
@@ -27,7 +38,6 @@ body > * {
     font-family: 'Vollkorn', sans-serif;
     background: url("images/dripping_slime.png") no-repeat;
     background-size: cover;
-    color: #ffffff;
     font-weight: bold;
 }
 
@@ -70,11 +80,27 @@ input {
     font-size: 1.5em;
 }
 
-@media screen and (max-width: 750px) {
+body.win .guess_here, body.win img.slimer, .hide {
+    display: none;
+}
+
+.hint, #hidden {
+    color: #ff0000;
+}
+
+.hint:hover, .guess_area {
+    color: #ffffff;
+}
+
+a {
+    text-decoration: none;
+}
+
+@media screen and (max-width: 550px) {
     #map, .ghostbusters_team {
         width: 100%;
     }
-    #map {
-        height: 62%;
+    #map, .ghostbusters_team {
+        height: 35%;
     }
 }
