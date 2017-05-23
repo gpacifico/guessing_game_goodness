@@ -92,6 +92,10 @@ body.win .guess_here, body.win img.slimer, .hide {
     color: #ffffff;
 }
 
+.hint {
+    cursor: pointer;
+}
+
 a {
     text-decoration: none;
 }
