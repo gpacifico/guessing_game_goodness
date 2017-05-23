@@ -1,7 +1,3 @@
-/*#map, .guess_area, .ghostbusters_team {*/
-    /*height: 50%;*/
-/*}*/
-
 #map, .ghostbusters_team {
     height: 40%;
 }
@@ -28,8 +24,6 @@
 html, body {
     height: 100%;
     background-color: #000000;
-    /*background-color: #ff7400;*/
-    /*background-color: #52eb52;*/
 }
 
 body {
@@ -44,7 +38,6 @@ body > * {
     font-family: 'Vollkorn', sans-serif;
     background: url("images/dripping_slime.png") no-repeat;
     background-size: cover;
-    color: #ffffff;
     font-weight: bold;
 }
 
@@ -87,28 +80,16 @@ input {
     font-size: 1.5em;
 }
 
-/*body.win body#body{*/
-    /*opacity: 1;*/
-/*}*/
-
-body.win .guess_here{
+body.win .guess_here, body.win img.slimer, .hide {
     display: none;
 }
 
-body.win img.slimer {
-    display: none;
+.hint, #hidden {
+    color: #ff0000;
 }
 
-.hint {
-    color: red;
-}
-
-.hint:hover {
-    color: white;
-}
-
-.hide {
-    display: none;
+.hint:hover, .guess_area {
+    color: #ffffff;
 }
 
 a {
@@ -120,7 +101,6 @@ a {
         width: 100%;
     }
     #map, .ghostbusters_team {
-        /*height: 62%;*/
         height: 35%;
     }
 }

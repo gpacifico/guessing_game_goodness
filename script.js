@@ -26,7 +26,6 @@ function Ghostbusters_Map() {
     this.callback = function(results, status) {
         if (status === google.maps.places.PlacesServiceStatus.OK) {
             number_of_restaurants = results.length;
-            console.log("number of restaurants", number_of_restaurants);
             for (var i = 0; i < results.length; i++) {
                 createMarker(results[i]);
             }
@@ -81,9 +80,6 @@ function Guess_Ghosts () {
         else if (the_guess == the_number) {
             $("#response_div").text("GHOSTS BUSTED!").css({"color": "#0a7722"}).append('<br><img src = "images/ghostbusters_logo_8.png">');
             $("body").css({"opacity": 1}).addClass("win");
-            // $(".guess_here").css({"display": "none"});
-            // $(".slimer").css({"display": "none"});
-            // $("body").addClass("win");
         }
         else {
             $("#response_div").text("Dude, you need to type a number!").css({"color": "#8f2add"});
@@ -111,7 +107,6 @@ function Guess_Ghosts () {
 
 $(document).ready(function () {
     Guess_Ghosts();
-    // console.log("random number", random_number);
     $(".submit_button").click(function () {
         make_guess();
     });
@@ -121,7 +116,6 @@ $(document).ready(function () {
         }
     });
     $(".hint").click(function () {
-        // $("#help").text("Move around the map and make sure you count all the markers to know the upper limit!").css({"color": "#d61148"});
         $("#hidden").toggleClass("hide");
         })
 });
